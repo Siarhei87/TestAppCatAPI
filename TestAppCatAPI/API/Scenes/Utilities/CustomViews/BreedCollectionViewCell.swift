@@ -11,7 +11,7 @@ import UIKit
 class BreedCollectionViewCell: UICollectionViewCell {
     var titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .white
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 14)
         return label
@@ -60,7 +60,7 @@ class BreedCollectionViewCell: UICollectionViewCell {
         contentView.layer.borderColor = UIColor.clear.cgColor
         contentView.layer.masksToBounds = true
 
-        layer.shadowColor = UIColor.systemGray6.cgColor
+        layer.shadowColor = UIColor.gray.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 2.0)
         layer.shadowRadius = 2.0
         layer.shadowOpacity = 1.0

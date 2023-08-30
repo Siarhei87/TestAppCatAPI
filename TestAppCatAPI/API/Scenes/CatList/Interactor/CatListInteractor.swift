@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+protocol CatListInteractorProtocol {
+    func fetchCats(page: Int, limit: Int, completion: @escaping ([Cat]?, Error?) -> Void)
+}
+
+class CatListInteractor: CatListInteractorProtocol {
+    private let repository: CatsRepositoryProtocol
+
+    init(repository: CatsRepositoryProtocol) {
+        self.repository = repository
+    }
+
+    func fetchCats(page: Int, limit: Int, completion: @escaping ([Cat]?, Error?) -> Void) {
+        repository.fetchRandomCat(page: page, limit: limit, completion: completion)
+    }
+}
